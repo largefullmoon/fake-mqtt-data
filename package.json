@@ -1,0 +1,6 @@
+{
+   "type": "commonjs",
+   "dependencies": {
+      "mqtt": "^5.5.5"
+   }
+}
