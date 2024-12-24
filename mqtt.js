@@ -46,12 +46,12 @@ clientFac.on('connect', () => {
     // Create a message to publish 
     tags.forEach(tag => {
       const position_data = {
-        x: 40 + Math.random() * (50 - 40),
-        x_stdev: 40 + Math.random() * (50 - 40),
-        y: 10 + Math.random() * (30 - 20),
-        y_stdev: 10 + Math.random() * (30 - 20),
-        z: 30 + Math.random() * (50 - 40),
-        z_stdev: 30 + Math.random() * (50 - 40),
+        x: 1 + Math.random() * (50 - 10),
+        x_stdev: 1 + Math.random() * (50 - 10),
+        y: 1 + Math.random() * (30 - 10),
+        y_stdev: 1 + Math.random() * (30 - 10),
+        z: 3 + Math.random() * (50 - 20),
+        z_stdev: 3 + Math.random() * (50 - 20),
       }
       const messagePosition = JSON.stringify(position_data); // Convert data to JSON string  
       clientFac.publish(positionTopic + "factory" + "/" + tag, messagePosition, (error) => {
