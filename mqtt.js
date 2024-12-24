@@ -46,12 +46,12 @@ clientFac.on('connect', () => {
     // Create a message to publish 
     tags.forEach(tag => {
       const position_data = {
-        x: 1 + Math.random() * (50 - 1),
-        x_stdev: 1 + Math.random() * (50 - 1),
-        y: 1 + Math.random() * (50 - 1),
-        y_stdev: 1 + Math.random() * (50 - 1),
-        z: 1 + Math.random() * (50 - 1),
-        z_stdev: 1 + Math.random() * (50 - 1),
+        x: 40 + Math.random() * (50 - 40),
+        x_stdev: 40 + Math.random() * (50 - 40),
+        y: 10 + Math.random() * (30 - 20),
+        y_stdev: 10 + Math.random() * (30 - 20),
+        z: 30 + Math.random() * (50 - 40),
+        z_stdev: 30 + Math.random() * (50 - 40),
       }
       const messagePosition = JSON.stringify(position_data); // Convert data to JSON string  
       clientFac.publish(positionTopic + "factory" + "/" + tag, messagePosition, (error) => {
@@ -98,7 +98,7 @@ clientFac.on('connect', () => {
         });
       })
     });
-  }, 1000);
+  }, 10 * 1000);
 });
 
 // Connect to the broker  
